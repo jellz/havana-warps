@@ -1,0 +1,50 @@
+warps:
+  brazil:
+    name: Brazil
+    x-coord: -3356
+    y-coord: 67
+    z-coord: 923
+    facing: 135
+    item: SUGAR_CANE
+  china:
+    name: China
+    x-coord: 7518
+    y-coord: 65
+    z-coord: -2624
+    facing: 90
+    item: BOOK
+  congo:
+    name: Congo
+    x-coord: 1533
+    y-coord: 74
+    z-coord: 301
+    facing: 90
+    item: EGG
+  desert:
+    name: Desert
+    x-coord: 3598
+    y-coord: 64
+    z-coord: -2323
+    facing: 180
+    item: REDSTONE
+  mesa:
+    name: Mesa
+    x-coord: -6104
+    y-coord: 83
+    z-coord: -2268
+    facing: -27.5
+    item: RED_TERRACOTTA
+  papua:
+    name: Papua
+    x-coord: 8415
+    y-coord: 63
+    z-coord: 354
+    facing: 0
+    item: DRIED_KELP
+  poland:
+    name: Poland
+    x-coord: 1246
+    y-coord: 64
+    z-coord: -3166
+    facing: 0
+    item: STONE_BRICKS

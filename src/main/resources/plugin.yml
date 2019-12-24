@@ -1,0 +1,10 @@
+name: HavanaWarps
+version: ${project.version}
+main: com.danielgulic.havanawarps.HavanaWarps
+api-version: 1.13
+authors: [jellz]
+depends: [SmartInvs]
+commands:
+  warps:
+    description: Open warps menu
+    usage: /warps
