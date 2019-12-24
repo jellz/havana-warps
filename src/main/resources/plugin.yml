@@ -3,8 +3,9 @@ version: ${project.version}
 main: com.danielgulic.havanawarps.HavanaWarps
 api-version: 1.13
 authors: [jellz]
-depends: [SmartInvs]
+depend: [SmartInvs]
 commands:
   warps:
+    permission: havanawarps.warps
     description: Open warps menu
     usage: /warps
