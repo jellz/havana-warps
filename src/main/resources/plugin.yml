@@ -9,3 +9,7 @@ commands:
     permission: havanawarps.warps
     description: Open warps menu
     usage: /warps
+  reloadhavanawarps:
+    permission: havanawarps.reload
+    description: Reloads Havana Warps config
+    usage: /reloadhavanawarps

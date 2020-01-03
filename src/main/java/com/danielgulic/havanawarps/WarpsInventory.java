@@ -45,7 +45,7 @@ public class WarpsInventory implements InventoryProvider {
         }
 
         // Close
-        contents.set(0, 8,
+        contents.set(1, 8,
                 ClickableItem.of(
                         new ItemBuilder(Material.BARRIER)
                                 .name(ChatColor.DARK_RED + "Close")

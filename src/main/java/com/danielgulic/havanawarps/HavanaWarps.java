@@ -25,6 +25,7 @@ public class HavanaWarps extends JavaPlugin implements CommandExecutor {
     public void onEnable() {
         instance = this;
         getCommand("warps").setExecutor(this);
+        getCommand("reloadhavanawarps").setExecutor(this);
 
         FileConfiguration fileConfiguration = getConfig();
         saveDefaultConfig();
@@ -35,13 +36,13 @@ public class HavanaWarps extends JavaPlugin implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (sender instanceof Player) {
-            Player player = (Player) sender;
-            if (label.equalsIgnoreCase("warps")) {
+        if (label.equalsIgnoreCase("warps")) {
+            if (sender instanceof Player) {
+                Player player = (Player) sender;
                 final SmartInventory inventory = SmartInventory.builder()
                         .id("warpsMenu")
                         .provider(new WarpsInventory())
-                        .size(1, 9)
+                        .size(2, 9)
                         .closeable(true)
                         .title(ChatColor.DARK_AQUA + "Warp to an outpost")
                         .build();
@@ -49,9 +50,13 @@ public class HavanaWarps extends JavaPlugin implements CommandExecutor {
                 inventory.open(player);
 
                 return true;
+            } else {
+                sender.sendMessage(ChatColor.RED + "This command can only be used by players.");
+                return true;
             }
-        } else {
-            sender.sendMessage(ChatColor.RED + "This command can only be used by players.");
+        } else if (label.equalsIgnoreCase("reloadhavanawarps")) {
+            reloadConfig();
+            sender.sendMessage(ChatColor.GREEN + "Reloaded Havana Warps configuration");
             return true;
         }
 
